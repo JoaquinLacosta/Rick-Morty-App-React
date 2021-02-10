@@ -1,0 +1,34 @@
+.Header {
+    width: 100%;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+.Header__button {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+.Header__button.DarkMode {
+    color: black;
+    background-color: transparent;
+}
+.Header__button i {
+    padding-left: 5px;
+    width: 100%;
+    font-size: 25px;
+    color: rgb(72, 72, 255);
+}
+@media screen and (max-width: 375px) {
+    .Header h1 {
+        font-size: 24px;
+    }
+}
