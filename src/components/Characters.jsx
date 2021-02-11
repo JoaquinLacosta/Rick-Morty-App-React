@@ -5,7 +5,6 @@ import useCharacters from "../hooks/useCharacter"
 
 const initialState = {
     favorites: [],
-
 }
 
 const favoriteReducer = (state, action) => {
@@ -32,6 +31,7 @@ const Characters = ({darkMode}) => {
     const [search, setSearch] = useState("")
     const searchInput = useRef(null);
     const API = `https://rickandmortyapi.com/api/character/?page=${pages}`
+    // const API2 = `https://rickandmortyapi.com/api/character/?name=${search}&page=${pages}`
 
     const characters = useCharacters(API)
 
@@ -53,6 +53,11 @@ const Characters = ({darkMode}) => {
         }),
         [characters, search]
     )
+
+    // const buscarPj = (e) => {
+    //     const pj = e.target.value
+    //     setSearch(pj)
+    // }
 
     return(
         <div className={darkMode ? "Characters__Container" : "Characters__Container DarkMode"}>
